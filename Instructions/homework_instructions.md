@@ -50,7 +50,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 1. Create a GitHub repo called `burger` and clone it to your computer.
 
-2. Make a package.json file by running `npm init` from the command line.
+2. Make a package.json file by running `npm init -y` from the command line.
 
 3. Install the Express npm package: `npm install express`.
 
