@@ -9,8 +9,12 @@ var orm = {
             cb(data);
         });
     },
-    insertOne: function(){
-        
+    insertOne: function(name){
+        connection.query(`INSERT INTO burgers (burger_name) VALUES (${name})`, function(err, data) {
+            if (err) throw err;
+            console.log("inserted " + data)
+
+        })   
     },
     eat: function(id, cb){
         connection.query('UPDATE burgers SET devoured = 1 WHERE id =?', id, function(err, data) {

@@ -3,7 +3,7 @@
     <h2>All Uneaten Burgers:</h2>
 {{#each burgers}}
     {{#unless devoured}}
-    <h3>{{ burger_name}} </h3><button type="devour">Devour</button>
+    <h3>{{ burger_name}} </h3><button class="devour" data-id={{id}}>Devour</button>
     {{/unless}}
 {{/each}}
 </ul>
@@ -11,7 +11,7 @@
     <h2>All Eaten Burgers:</h2>
 {{#each burgers}}
     {{#if devoured}}
-    <h3> {{burger_name}} </h3><button type="undevour">Undevour</button>
+    <h3> {{burger_name}} </h3><button class="delete">Clear</button>
     {{/if}}
 {{/each}}
 </ul>
@@ -24,5 +24,5 @@
     <input type="text" id="ca" name="name">
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button type="button" id="addBurger">Add Burger</button>
 </form>
