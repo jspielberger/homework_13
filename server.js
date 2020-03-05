@@ -20,10 +20,6 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/index.handlebars"));
-});
-
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
