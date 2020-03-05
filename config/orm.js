@@ -10,7 +10,7 @@ var orm = {
         });
     },
     insertOne: function(name){
-        connection.query(`INSERT INTO burgers (burger_name) VALUES (${name})`, function(err, data) {
+        connection.query(`INSERT INTO burgers (burger_name) VALUES ('${name}')`, function(err, data) {
             if (err) throw err;
             console.log("inserted " + data)
 
@@ -23,7 +23,14 @@ var orm = {
             }
             cb(data);
         });
-
+    },
+    delete: function(id, cb) {
+        connection.query("DELETE FROM burgers WHERE id =?", id, function(err, data) {
+            if (err) {
+                throw err;
+            }
+            cb(data);
+        }); 
     }
 
 }

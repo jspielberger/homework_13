@@ -11,7 +11,7 @@
     <h2>All Eaten Burgers:</h2>
 {{#each burgers}}
     {{#if devoured}}
-    <h3> {{burger_name}} </h3><button class="delete">Clear</button>
+    <h3> {{burger_name}} </h3><button class="delete" data-id={{id}}>Clear</button>
     {{/if}}
 {{/each}}
 </ul>
