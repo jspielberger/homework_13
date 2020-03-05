@@ -1,9 +1,11 @@
-<h1>Welcome to the Burger App</h1>
+<h1 style="left: 200px">Welcome to the Burger App!</h1>
 <ul>
     <h2>All Uneaten Burgers:</h2>
 {{#each burgers}}
     {{#unless devoured}}
-    <h3>{{ burger_name}} </h3><button class="devour" data-id={{id}}>Devour</button>
+    <img src="/css/download.png" />
+
+    <h3>{{ burger_name}} </h3><img class="uneaten_burger" /><button class="devour" data-id={{id}}>Devour</button>
     {{/unless}}
 {{/each}}
 </ul>

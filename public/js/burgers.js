@@ -37,7 +37,6 @@ $(".delete").on("click", function () {
         location.reload();
 
 
-    // Send the PUT request.
 
 });
 
