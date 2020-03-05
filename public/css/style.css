@@ -1,13 +1,15 @@
-.container {
-    background-image: linear-gradient(silver, red);
+body   { background-image: linear-gradient(silver, red);
 }
-h1 {
+#header {
     text-align: center;
     font-family: fantasy;
-    font-size: larger;
+    font-size: 50px;
 }
 .add-section {
     text-align: center;
+    border-style: groove;
+    border-width: .8ch;
+    border-color: aliceblue;
 }
 
 

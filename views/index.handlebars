@@ -1,10 +1,11 @@
 <div class="container">
     <div class="jumbotron" style="background-image: linear-gradient(silver, yellow);">
-        <h1>Welcome to the Burger App!</h1>
+        <h1 id="header">Welcome to the Spiel-Burger App!</h1>
+        <h4 style="text-align: center;">The only place where you, the consumer, can name and consume Spiel-Burgers.</h4>
     </div>
     <div class="row">
-        <ul class="col">
-            <h2>All Uneaten Burgers:</h2>
+        <ul class="col-6">
+            <h2>Uneaten Spiel-Burgers:</h2>
             {{#each burgers}}
             {{#unless devoured}}
 
@@ -14,27 +15,27 @@
             {{/unless}}
             {{/each}}
         </ul>
-        <ul class="col eaten-section">
-            <h2>All Eaten Burgers:</h2>
+        <ul class="col-6 eaten-section">
+            <h2>Eaten Spiel-Burgers:</h2>
             {{#each burgers}}
             {{#if devoured}}
             <h3> {{burger_name}} </h3><img src="/css/bittenburger.png" /><button class="delete"
-                data-id={{id}}>Clear</button>
+                data-id={{id}}>Dispose</button>
             {{/if}}
             {{/each}}
         </ul>
     </div>
     <div class="row">
         <div class="add-section col-12">
-            <h2>Add a Burger! Any Burger!</h2>
+            <h2>Add a Spiel-Burger! Any Spiel-Burger!</h2>
             <form class="create-form">
 
                 <div class="form-group">
-                    <label for="ca">Burger Name:</label>
+                    <label for="ca">Spiel-Burger Name:</label>
                     <input type="text" id="ca" name="name">
                 </div>
 
-                <button type="button" id="addBurger">Add Burger</button>
+                <button type="button" id="addBurger">Add Spiel-Burger</button>
             </form>
 
         </div>
