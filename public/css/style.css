@@ -1,12 +1,23 @@
-
-ul {
-    width: 1000px;
-    height: 500px;
+.container {
+    background-image: linear-gradient(silver, red);
 }
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    font-size: larger;
+}
+.add-section {
+    text-align: center;
+}
+
 
 ul img {
     width: 20%;
     height: 20%;
+}
+
+.eaten-section {
+    position: right;
 }
 
 /* img {

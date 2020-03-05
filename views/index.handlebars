@@ -1,30 +1,42 @@
-<h1 style="left: 200px">Welcome to the Burger App!</h1>
-<ul>
-    <h2>All Uneaten Burgers:</h2>
-{{#each burgers}}
-    {{#unless devoured}}
-    <img src="/css/download.png" />
+<div class="container">
+    <div class="jumbotron" style="background-image: linear-gradient(silver, yellow);">
+        <h1>Welcome to the Burger App!</h1>
+    </div>
+    <div class="row">
+        <ul class="col">
+            <h2>All Uneaten Burgers:</h2>
+            {{#each burgers}}
+            {{#unless devoured}}
 
-    <h3>{{ burger_name}} </h3><img class="uneaten_burger" /><button class="devour" data-id={{id}}>Devour</button>
-    {{/unless}}
-{{/each}}
-</ul>
-<ul>
-    <h2>All Eaten Burgers:</h2>
-{{#each burgers}}
-    {{#if devoured}}
-    <h3> {{burger_name}} </h3><button class="delete" data-id={{id}}>Clear</button>
-    {{/if}}
-{{/each}}
-</ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+            <h3>{{ burger_name}} </h3><img src="/css/download.png" /><button class="devour"
+                data-id={{id}}>Devour</button>
+            {{/unless}}
+            {{/each}}
+        </ul>
+        <ul class="col eaten-section">
+            <h2>All Eaten Burgers:</h2>
+            {{#each burgers}}
+            {{#if devoured}}
+            <h3> {{burger_name}} </h3><img src="/css/bittenburger.png" /><button class="delete"
+                data-id={{id}}>Clear</button>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="row">
+        <div class="add-section col-12">
+            <h2>Add a Burger! Any Burger!</h2>
+            <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="ca" name="name">
+                </div>
 
-  <button type="button" id="addBurger">Add Burger</button>
-</form>
+                <button type="button" id="addBurger">Add Burger</button>
+            </form>
+
+        </div>
+    </div>
+</div>
